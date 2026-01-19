@@ -52,3 +52,37 @@ Blueprint data is stored locally using mocked persistence.
 ### 3. Contract Lifecycle Management
 Each contract follows a controlled lifecycle:
 
+
+## Project Structure
+
+contract-management-frontend/
+│
+├── public/
+│ └── vite.svg
+│
+├── src/
+│ ├── pages/
+│ │ ├── BlueprintPage.tsx
+│ │ ├── CreateContractPage.tsx
+│ │ ├── ContractViewPage.tsx
+│ │ └── DashboardPage.tsx
+│ │
+│ ├── services/
+│ │ └── storage.ts
+│ │
+│ ├── types/
+│ │ ├── blueprint.ts
+│ │ └── contract.ts
+│ │
+│ ├── utils/
+│ │ └── lifecycle.ts
+│ │
+│ ├── App.tsx
+│ └── main.tsx
+│
+├── index.html
+├── package.json
+├── vite.config.ts
+└── README.md
+
+
