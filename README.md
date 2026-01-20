@@ -1,90 +1,106 @@
 # Contract Management Platform (Frontend)
 
-## Objective
-Build a frontend-based Contract Management Platform from scratch to demonstrate
-product thinking, UI design, state management, and clean code architecture.
-
-No backend or UI designs were provided. The complete UI, data flow, and logic have
-been designed and implemented independently.
+A frontend-based **Contract Management Platform** built using **React, TypeScript, and Vite**.  
+This project demonstrates product thinking, UI design, state management, and clean frontend architecture for managing contract blueprints and contracts.
 
 ---
 
-## Tech Stack
-- React
-- TypeScript
-- Vite
-- CSS
-- Local Storage (mocked persistence)
+## 🚀 Objective
+
+The goal of this project is to build a **frontend-only contract management system** that allows users to:
+
+- Create reusable contract **Blueprints**
+- Configure and position fields inside a blueprint
+- Generate **Contracts** from blueprints
+- Fill contract fields and track contract status
+
+This project was developed as part of a **Full Stack / Frontend Engineering Assignment**.
 
 ---
 
-## Functional Requirements
+## 🛠 Tech Stack
 
-### 1. Blueprint Creation
-A Blueprint represents a reusable contract template.
+- **React** – UI development
+- **TypeScript** – Type safety and scalability
+- **Vite** – Fast development and build tool
+- **CSS** – Styling
+- **ESLint** – Code quality and linting
 
-Features:
-- Create a blueprint with configurable fields
+---
+
+## 📂 Project Structure
+
+```
+contract-management-frontend/
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Application pages
+│ ├── types/ # TypeScript interfaces & types
+│ ├── utils/ # Helper functions
+│ ├── App.tsx # Root component
+│ └── main.tsx # Entry point
+├── public/
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+
+---
+
+## ✨ Features Implemented
+
+### 1. Blueprint Management
+- Create a blueprint (contract template)
+- Add configurable fields
 - Supported field types:
   - Text
   - Date
-  - Checkbox
   - Signature
-- Basic field positioning on a page
-- Field metadata stored:
-  - Type
+  - Checkbox
+- Store field metadata:
+  - Field type
   - Label
-  - Position
+  - Position (basic placement)
 
-Blueprint data is stored locally using mocked persistence.
-
----
-
-### 2. Contract Creation from Blueprint
+### 2. Contract Creation
 - Select an existing blueprint
 - Generate a contract from the blueprint
-- Contract inherits all blueprint fields
-- Users can fill values for each field
-- Blueprint structure remains immutable
+- Render all fields dynamically based on blueprint definition
+
+### 3. Contract Filling
+- Fill in contract fields
+- Track contract status:
+  - Draft
+  - Completed (basic status handling)
+
+### 4. State Management
+- Local state management using React hooks
+- Mocked/local persistence (no backend dependency)
 
 ---
-### 3. Contract Lifecycle Management
 
-- Contracts can be revoked after creation or sending
-- State transitions are strictly controlled
-- Locked contracts cannot be edited
-- Revoked contracts cannot proceed further
+## 🧪 Assumptions & Limitations
+
+- This is a **frontend-only** implementation
+- Data persistence is mocked / stored locally
+- No authentication or user roles implemented
+- Field positioning is basic (drag & drop not implemented)
+- No backend API integration
 
 ---
 
+## ⚙️ Setup Instructions
 
+### Prerequisites
+- Node.js (v18 or above recommended)
+- npm or yarn
 
-### 4. Contract Listing Dashboard
+### Installation
 
-- Displays all contracts in a table view
-
-- Includes:
-
-&nbsp; - Contract name
-
-&nbsp; - Blueprint name
-
-&nbsp; - Status
-
-&nbsp; - Created date
-
-&nbsp; - Action buttons
-
-- Filterable by:
-
-&nbsp; - Active
-
-&nbsp; - Pending
-
-&nbsp; - Signed
-
-
-
-
-
-
+```bash
+git clone https://github.com/Tanishka-K03/contract-management-frontend.git
+cd contract-management-frontend
+npm install
