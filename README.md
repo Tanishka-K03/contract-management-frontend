@@ -48,41 +48,43 @@ Blueprint data is stored locally using mocked persistence.
 - Blueprint structure remains immutable
 
 ---
-
 ### 3. Contract Lifecycle Management
-Each contract follows a controlled lifecycle:
+
+- Contracts can be revoked after creation or sending
+- State transitions are strictly controlled
+- Locked contracts cannot be edited
+- Revoked contracts cannot proceed further
+
+---
 
 
-## Project Structure
 
-contract-management-frontend/
-│
-├── public/
-│ └── vite.svg
-│
-├── src/
-│ ├── pages/
-│ │ ├── BlueprintPage.tsx
-│ │ ├── CreateContractPage.tsx
-│ │ ├── ContractViewPage.tsx
-│ │ └── DashboardPage.tsx
-│ │
-│ ├── services/
-│ │ └── storage.ts
-│ │
-│ ├── types/
-│ │ ├── blueprint.ts
-│ │ └── contract.ts
-│ │
-│ ├── utils/
-│ │ └── lifecycle.ts
-│ │
-│ ├── App.tsx
-│ └── main.tsx
-│
-├── index.html
-├── package.json
-├── vite.config.ts
-└── README.md
+### 4. Contract Listing Dashboard
+
+- Displays all contracts in a table view
+
+- Includes:
+
+&nbsp; - Contract name
+
+&nbsp; - Blueprint name
+
+&nbsp; - Status
+
+&nbsp; - Created date
+
+&nbsp; - Action buttons
+
+- Filterable by:
+
+&nbsp; - Active
+
+&nbsp; - Pending
+
+&nbsp; - Signed
+
+
+
+
 
 
